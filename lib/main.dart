@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workshop_gdg/my_store_app.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,13 +10,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      theme: ThemeData.from(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red)),
+      home: const MyStoreApp(),
     );
   }
 }
